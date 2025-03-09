@@ -70,7 +70,7 @@ function TagsSourceBase:process_completion(cc)
         sortText = "#" .. tag,
         label = "Tag: #" .. tag,
         kind = vim.lsp.protocol.CompletionItemKind.Text,
-        insertText = "#" .. tag,
+        insertText = tag,
         data = {
           bufnr = cc.request.context.bufnr,
           in_frontmatter = cc.in_frontmatter,
