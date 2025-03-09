@@ -110,6 +110,7 @@ function TagsSourceBase:process_execute(item)
     local line = vim.api.nvim_buf_get_lines(item.data.bufnr, item.data.line, item.data.line + 1, true)[1]
     line = util.string_replace(line, "#" .. item.data.tag, item.data.tag, 1)
     vim.api.nvim_buf_set_lines(item.data.bufnr, item.data.line, item.data.line + 1, true, { line })
+    print("line: ", line)
   end
 end
 
