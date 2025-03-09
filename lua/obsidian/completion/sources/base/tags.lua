@@ -108,7 +108,7 @@ function TagsSourceBase:process_execute(item)
     -- TODO: ideally we should be able to do this by specifying the completion item in the right way,
     -- but I haven't figured out how to do that.
     print("Item data Line here: ", item.data.line)
-    local line = vim.api.nvim_buf_get_lines(item.data.bufnr, item.data.line, item.data.line + 1, true)[0]
+    local line = vim.api.nvim_buf_get_lines(item.data.bufnr, item.data.line, item.data.line + 1, true)
     print("Line here: ", line)
     line = util.string_replace(line, "#" .. item.data.tag, item.data.tag, 1)
     vim.api.nvim_buf_set_lines(item.data.bufnr, item.data.line, item.data.line + 1, true, { line })
