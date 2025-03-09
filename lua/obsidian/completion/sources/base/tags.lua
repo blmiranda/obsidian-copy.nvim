@@ -74,7 +74,7 @@ function TagsSourceBase:process_completion(cc)
         data = {
           bufnr = cc.request.context.bufnr,
           in_frontmatter = cc.in_frontmatter,
-          line = cc.request.context.cursor.line,
+          line = cc.request.context.cursor.line - 1,
           tag = tag,
         },
       }
