@@ -36,9 +36,11 @@ M.can_complete = function(request)
   end
 
   -- Check if we're inside frontmatter.
-  local in_frontmatter = true
+  local in_frontmatter = false
   local line = request.context.cursor.line
   local frontmatter_start, frontmatter_end = get_frontmatter_boundaries(request.context.bufnr)
+  print("Frontmatter start: ", frontmatter_start)
+  print("Frontmatter end: ", frontmatter_end)
   if
     frontmatter_start ~= nil
     and frontmatter_start <= (line + 1)
