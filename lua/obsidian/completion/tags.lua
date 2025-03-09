@@ -39,9 +39,6 @@ M.can_complete = function(request)
   local in_frontmatter = false
   local line = request.context.cursor.line - 1
   local frontmatter_start, frontmatter_end = get_frontmatter_boundaries(request.context.bufnr)
-  print("Frontmatter start: ", frontmatter_start)
-  print("Frontmatter end: ", frontmatter_end)
-  print("Line: ", line)
   if
     frontmatter_start ~= nil
     and (frontmatter_start + 1) <= line
