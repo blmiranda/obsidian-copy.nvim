@@ -102,6 +102,7 @@ end
 --- Runs a generalized version of the execute method
 ---@param item any
 function TagsSourceBase:process_execute(item)
+  print("in_frontmatter: ", item.data.in_frontmatter)
   if item.data.in_frontmatter then
     -- Remove the '#' at the start of the tag.
     -- TODO: ideally we should be able to do this by specifying the completion item in the right way,
